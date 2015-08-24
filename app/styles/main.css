@@ -46,13 +46,13 @@ body {
   margin-bottom:0px;
 }
 
-.sidebar .room-list {
+.sidebar .channel-list {
   margin-top:20px;
   background:#4d394b;
   position:relative;
 }
 
-.sidebar .room-list .room a{
+.sidebar .channel-list .channel a{
   display:block;
   color:rgba(255,255,255,0.6);
   padding:3px 0px 3px 15px;
@@ -67,22 +67,22 @@ body {
   border-bottom-right-radius: 4px;
 }
 
-.sidebar .room-list .room a:hover{
+.sidebar .channel-list .channel a:hover{
   text-decoration: none;
   background:#3E313C;
 }
 
-.sidebar .room-list .room a.selected{
+.sidebar .channel-list .channel a.selected{
   background:#4c9689;
   color:#fff;
   text-decoration: none !important;
 }
 
-.sidebar .room-list .room.create {
+.sidebar .channel-list .channel.create {
   font-style: italic;
 }
 
-.sidebar .room-list .list-head {
+.sidebar .channel-list .list-head {
   margin-top:10px;
   color: #fff;
   font-weight: bold;
