@@ -54,7 +54,7 @@ angular
         controller: 'ProfileCtrl as profileCtrl',
         templateUrl: 'users/profile.html',
         resolve: {
-          auth: function($state, Users Auth){
+          auth: function($state, Users, Auth){
             return Auth.$requireAuth().catch(function(){
               $state.go('home');
             });
@@ -62,6 +62,27 @@ angular
           profile: function(Users, Auth){
             return Auth.$requireAuth().then(function(auth){
               return Users.getProfile(auth.uid).$loaded();
+            });
+          }
+        }
+      })
+      .state('channels', {
+        url: '/channels',
+        resolve: {
+          channels: function (Channels){
+            return Channels.$loaded();
+          },
+          profile: function ($state, Auth, Users){
+            return Auth.$requireAuth().then(function(auth){
+              return Users.getProfile(auth.uid).$loaded().then(function (profile){
+                if(profile.displayName){
+                  return profile;
+                } else {
+                  $state.go('profile');
+                }
+              });
+            }, function(error){
+              $state.go('home');
             });
           }
         }
