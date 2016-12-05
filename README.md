@@ -1,5 +1,11 @@
 # angularfire-slack
 
+This project has been updated!
+
+See the [updated tutorial on Thinkster](https://thinkster.io/tutorials/angularfire-realtime-slack-clone) and the [updated starter code](https://github.com/gothinkster/angularfire-slack).
+
+***
+
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.11.1.
 
