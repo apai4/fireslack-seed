@@ -1,4 +1,4 @@
-# angularfire-slack
+# rama-slack
 
 This project has been updated!
 
